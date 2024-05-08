@@ -4,5 +4,6 @@ module.exports = {
       "src/": "build/",
     },
     compile: "tsc",
+    extensions: ["ts", "tsx"],
   },
 }
