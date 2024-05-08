@@ -5,6 +5,11 @@
   "description": "Get the columns and rows of a stream in a ink app",
   "main": "build/index.js",
   "scripts": {
+    "check-licenses": "license-checker --summary --unknown --direct --production",
+    "build": "tsc",
+    "dev": "npm run build -- --watch",
+    "fmt": "prettier --write src/",
+    "lint": "prettier --check src/ && xo",
     "test": "ava"
   },
   "repository": {
@@ -29,7 +34,17 @@
   },
   "homepage": "https://github.com/gowikel/use-stream-dimensions#readme",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "ink": "^4.0.0"
+    "ink": "^4.0.0",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@ava/typescript": "^5.0.0",
+    "@sindresorhus/tsconfig": "^5.0.0",
+    "@types/node": "^20.12.11",
+    "ava": "^6.1.3",
+    "license-checker": "^25.0.1",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "xo": "^0.58.0"
   }
 }
