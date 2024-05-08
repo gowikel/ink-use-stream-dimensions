@@ -1,0 +1,35 @@
+{
+  "name": "use-stream-dimensions",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Get the columns and rows of a stream in a ink app",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gowikel/use-stream-dimensions.git"
+  },
+  "keywords": [
+    "ink",
+    "ink-hook",
+    "react",
+    "terminal",
+    "console",
+    "dimensions",
+    "stream",
+    "command-line",
+    "stdout"
+  ],
+  "author": "Pedro Jose Piquero Plaza <pedropiqueroplaza@proton.me>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/gowikel/use-stream-dimensions/issues"
+  },
+  "homepage": "https://github.com/gowikel/use-stream-dimensions#readme",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "ink": "^4.0.0"
+  }
+}
