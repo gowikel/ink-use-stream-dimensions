@@ -3,8 +3,8 @@ import { useEffect, useState } from "react"
 export type ConsoleStream = {
   columns: number
   rows: number
-  on: (event: "resize", cb: () => void) => void
-  off: (event: "resize", cb: () => void) => void
+  on: (event: "resize", callback: () => void) => void
+  off: (event: "resize", callback: () => void) => void
 }
 
 export function useStreamDimensions(stdout: ConsoleStream): [number, number] {
@@ -14,7 +14,9 @@ export function useStreamDimensions(stdout: ConsoleStream): [number, number] {
   ])
 
   useEffect(() => {
-    const handler = () => setDimensions([stdout.columns, stdout.rows])
+    const handler = () => {
+      setDimensions([stdout.columns, stdout.rows])
+    }
 
     stdout.on("resize", handler)
     return () => {

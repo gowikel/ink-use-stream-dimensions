@@ -1,7 +1,7 @@
 module.exports = {
   typescript: {
     rewritePaths: {
-      "src/": "build/",
+      "src/": "build/esm/",
     },
     compile: "tsc",
     extensions: ["ts", "tsx"],

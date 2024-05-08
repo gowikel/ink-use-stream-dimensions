@@ -1,10 +1,9 @@
 import React from "react"
 import test from "ava"
 import { render } from "ink-testing-library"
-import { useStreamDimensions } from "./index.js"
-import type { ConsoleStream } from "./index.js"
 import { act } from "@testing-library/react"
-import sinon from "sinon"
+import { fake } from "sinon"
+import { useStreamDimensions, type ConsoleStream } from "./index.js"
 
 type Instance = {
   unmount: () => void
@@ -28,8 +27,8 @@ test("it gets the right columns and rows", (t) => {
   const mockedStdout = {
     columns: 12,
     rows: 34,
-    on: sinon.fake(),
-    off: sinon.fake(),
+    on: fake(),
+    off: fake(),
   }
 
   const [result] = setup(mockedStdout)
@@ -41,8 +40,8 @@ test("it subscribes to changes", (t) => {
   const mockedStdout = {
     columns: 12,
     rows: 34,
-    on: sinon.fake(),
-    off: sinon.fake(),
+    on: fake(),
+    off: fake(),
   }
 
   act(() => {
@@ -56,8 +55,8 @@ test("it cleans the stream subscription", (t) => {
   const mockedStdout = {
     columns: 12,
     rows: 34,
-    on: sinon.fake(),
-    off: sinon.fake(),
+    on: fake(),
+    off: fake(),
   }
   let component: Instance | null = null
 

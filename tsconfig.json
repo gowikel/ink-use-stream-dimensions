@@ -1,8 +1,10 @@
 {
   "extends": "@sindresorhus/tsconfig",
   "compilerOptions": {
-    "outDir": "build"
+    "outDir": "build/esm"
   },
   "include": ["src"],
-  "esModuleInterop": true
+  "esModuleInterop": true,
+  "module": "node16",
+  "target": "es2022"
 }
