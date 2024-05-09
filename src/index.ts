@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useLayoutEffect, useState } from "react"
 
 export type ConsoleStream = {
   columns: number
@@ -13,7 +13,7 @@ export function useStreamDimensions(stdout: ConsoleStream): [number, number] {
     stdout.rows,
   ])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handler = () => {
       setDimensions([stdout.columns, stdout.rows])
     }
