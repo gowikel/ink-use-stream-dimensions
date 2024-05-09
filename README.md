@@ -19,7 +19,7 @@ npm install ink-use-stream-dimensions
 - on, handler with signature `(event: "resize", callback: () => void) => void`
 - off, handler with signature `(event: "resize", callback: () => void) => void`
 
-(useStdout returns the stdout handler which already has that signature)
+(`useStdout` returns the `stdout` object which already has that signature)
 
 It returns the columns and rows, and subscribes to changes to them
 
