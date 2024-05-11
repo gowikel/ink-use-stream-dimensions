@@ -5,12 +5,19 @@
   "description": "Get the columns and rows of a stream in a ink app",
   "main": "./build/cjs/index.js",
   "module": "./build/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./build/esm/index.js",
+      "require": "./build/cjs/index.js"
+    }
+  },
   "files": [
     "build/"
   ],
   "scripts": {
     "check-licenses": "license-checker --summary --unknown --direct --production",
-    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "esm2cjs --in build/esm --out build/cjs --loglevel error --cleanOutDir",
     "fmt": "prettier --write src/",
     "lint": "prettier --check src/ && xo",
     "test": "ava",
@@ -38,10 +45,11 @@
   },
   "homepage": "https://github.com/gowikel/use-stream-dimensions#readme",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "ink": "^4.0.0"
+    "ink": "^4.0.0",
+    "react": "^18.0.0"
   },
   "devDependencies": {
+    "@alcalzone/esm2cjs": "^1.1.2",
     "@ava/typescript": "^5.0.0",
     "@sindresorhus/tsconfig": "^5.0.0",
     "@testing-library/react": "^15.0.7",
@@ -62,6 +70,6 @@
     "xo": "^0.58.0"
   },
   "dependencies": {
-    "react": "^18.3.1"
+    "react": "^18.0.0"
   }
 }
