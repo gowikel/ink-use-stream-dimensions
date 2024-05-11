@@ -1,7 +1,7 @@
 {
   "name": "ink-use-stream-dimensions",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Get the columns and rows of a stream in a ink app",
   "main": "./build/cjs/index.js",
   "module": "./build/esm/index.js",
