@@ -6,4 +6,5 @@ module.exports = {
     compile: "tsc",
     extensions: ["ts", "tsx"],
   },
+  files: ["src/**/*.test.ts", "src/**/*.test.tsx"],
 }
