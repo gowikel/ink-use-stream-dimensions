@@ -25,6 +25,9 @@ It returns the columns and rows, and subscribes to changes to them
 
 ## Example
 
+> :warning: This is my first published package. I am trying to make it compatible with ESM and CJS. If you find any
+> issue importing the library, feel free to file a bug
+
 ```javascript
 import React from 'react'
 import { Box, Text, useStdout } from "ink"
