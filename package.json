@@ -40,7 +40,8 @@
     "dimensions",
     "stream",
     "command-line",
-    "stdout"
+    "stdout",
+    "stdout-stream"
   ],
   "author": "Pedro Jose Piquero Plaza <pedropiqueroplaza@proton.me>",
   "license": "Unlicense",
