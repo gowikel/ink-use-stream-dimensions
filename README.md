@@ -23,6 +23,30 @@ npm install ink-use-stream-dimensions
 
 It returns the columns and rows, and subscribes to changes to them
 
+## Example
+
+```javascript
+import React from 'react'
+import { Box, Text, useStdout } from "ink"
+import { useStreamDimensions } from "ink-use-stream-dimensions"
+
+
+function MyApp() {
+   const { stdout } = useStdout()
+   const [columns, rows] = useStreamDimensions(stdout)
+
+   return (
+    <Box>
+      <Text>
+        {columns}x{rows}
+      </Text>
+    </Box>
+   )
+}
+
+export default MyApp
+```
+
 ## License
 
 This project is licensed under the Unlicense - see the [LICENSE](LICENSE) file for details.
