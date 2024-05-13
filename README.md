@@ -2,6 +2,8 @@
 
 > React hook to get the columns and rows of a stream (likely stdout) in [Ink](https://github.com/vadimdemedes/ink)
 
+This library is ESM compatible.
+
 ## Install
 
 ```
