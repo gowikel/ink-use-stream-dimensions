@@ -27,10 +27,7 @@
     "test": "ava",
     "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gowikel/use-stream-dimensions.git"
-  },
+  "repository": "github:gowikel/use-stream-dimensions",
   "keywords": [
     "ink",
     "ink-hook",
